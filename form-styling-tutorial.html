@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Styling Tutorial</title>
+    <style>
+        /* Base styles */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+
+        /* Demo form container */
+        .form-container {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        /* Input styling */
+        .styled-input {
+            width: 100%;
+            padding: 8px 12px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .styled-input:focus {
+            border-color: #4a90e2;
+            outline: none;
+        }
+
+        /* Select styling */
+        .styled-select {
+            width: 100%;
+            padding: 8px 12px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        /* Textarea styling */
+        .styled-textarea {
+            width: 100%;
+            min-height: 120px;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            resize: vertical;
+        }
+
+        /* Button styling */
+        .styled-button {
+            background-color: #4a90e2;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .styled-button:hover {
+            background-color: #357abd;
+        }
+
+        /* Form group spacing */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        /* Labels */
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        /* Code blocks */
+        pre {
+            background: #f8f8f8;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form Styling Tutorial</h1>
+    
+    <h2>Introduction</h2>
+    <p>This tutorial provides a detailed explanation of CSS properties used to style form controls, including what each property does and why it's used.</p>
+
+    <h2>Live Demo</h2>
+    <div class="form-container">
+        <form>
+            <div class="form-group">
+                <label for="name">Text Input</label>
+                <input type="text" id="name" class="styled-input" placeholder="Enter your name">
+            </div>
+
+            <div class="form-group">
+                <label for="country">Select Dropdown</label>
+                <select id="country" class="styled-select">
+                    <option value="">Choose a country</option>
+                    <option value="us">United States</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="ca">Canada</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Textarea</label>
+                <textarea id="message" class="styled-textarea" placeholder="Enter your message"></textarea>
+            </div>
+
+            <button type="submit" class="styled-button">Submit</button>
+        </form>
+    </div>
+
+    <h2>Detailed Property Explanations</h2>
+    
+    <h3>1. The :focus Pseudo-class</h3>
+    <p>The :focus pseudo-class is applied when an element receives focus, which can happen when:</p>
+    <ul>
+        <li>A user clicks or taps on an input element</li>
+        <li>A user tabs to the element using their keyboard</li>
+        <li>An element is programmatically focused using JavaScript</li>
+    </ul>
+    <pre><code>.styled-input:focus {
+    border-color: #4a90e2;  /* Changes border color when focused */
+    outline: none;          /* Removes default browser outline */
+}</code></pre>
+
+    <h3>2. Width Properties</h3>
+    <p>Width controls how wide an element should be:</p>
+    <ul>
+        <li><code>width: 100%;</code> - Makes the element take up the full width of its parent container</li>
+        <li><code>max-width: 800px;</code> - Sets a maximum width limit while allowing the element to be smaller on narrow screens</li>
+    </ul>
+
+    <h3>3. Padding and Margins</h3>
+    <p>Spacing properties create room around and within elements:</p>
+    <ul>
+        <li><code>padding: 8px 12px;</code> - Creates space inside the element (8px top/bottom, 12px left/right)</li>
+        <li><code>margin: 0 auto;</code> - Centers an element horizontally (0 top/bottom, auto left/right)</li>
+        <li><code>margin-bottom: 20px;</code> - Creates space below an element</li>
+    </ul>
+
+    <h3>4. Border Properties</h3>
+    <p>Border properties define the element's outer edge:</p>
+    <ul>
+        <li><code>border: 2px solid #ddd;</code> - Sets border width, style, and color in one line</li>
+        <li><code>border-radius: 4px;</code> - Rounds the corners of the element</li>
+        <li><code>border: none;</code> - Removes all borders (used on buttons)</li>
+    </ul>
+
+    <h3>5. Font Properties</h3>
+    <p>Text styling properties control how text appears:</p>
+    <ul>
+        <li><code>font-size: 16px;</code> - Sets the text size</li>
+        <li><code>font-weight: 500;</code> - Controls text thickness (used on labels)</li>
+        <li><code>font-family: -apple-system, ...</code> - Sets the typeface with fallbacks</li>
+    </ul>
+
+    <h3>6. Display and Positioning</h3>
+    <p>Layout properties control how elements are positioned:</p>
+    <ul>
+        <li><code>display: block;</code> - Makes elements stack vertically and take full width</li>
+        <li><code>line-height: 1.6;</code> - Sets the spacing between lines of text</li>
+    </ul>
+
+    <h3>7. Colors</h3>
+    <p>Color properties control the visual appearance:</p>
+    <ul>
+        <li><code>background-color: white;</code> - Sets the element's background color</li>
+        <li><code>color: #333;</code> - Sets the text color</li>
+        <li><code>border-color: #4a90e2;</code> - Sets the border color</li>
+    </ul>
+
+    <h3>8. Special Properties</h3>
+    <p>Properties specific to certain elements:</p>
+    <ul>
+        <li><code>resize: vertical;</code> - Allows vertical resizing of textareas</li>
+        <li><code>cursor: pointer;</code> - Changes the mouse cursor to indicate clickable elements</li>
+        <li><code>min-height: 120px;</code> - Sets a minimum height (used on textarea)</li>
+    </ul>
+
+    <h3>9. Outline Property</h3>
+    <p>The outline property is particularly important for focus states:</p>
+    <ul>
+        <li><code>outline: none;</code> - Removes the default browser focus outline. When using this, always provide an alternative focus indicator (like the border-color change in our example) for accessibility.</li>
+    </ul>
+
+    <h2>Best Practices</h2>
+    <ul>
+        <li>Always provide visible focus indicators for keyboard navigation</li>
+        <li>Use consistent spacing and sizing across form elements</li>
+        <li>Ensure color contrast meets accessibility standards</li>
+        <li>Test forms with keyboard navigation</li>
+        <li>Maintain responsive design principles</li>
+    </ul>
+
+</body>
+</html>
